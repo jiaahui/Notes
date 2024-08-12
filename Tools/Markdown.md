@@ -1,14 +1,19 @@
-## 注释
+# Markdown
 
-```text
-<!-- This content will not appear in the rendered Markdown -->
-```
+参考链接:
+
+- [Typora](https://support.typoraio.cn/zh/Markdown-Reference/)
+- [Github](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github)
+
+
+
+## 目录
+
+[TOC]
 
 ## 转义
 
-```markdown
-\*\* NOT BOLD \*\*
-```
+和编程语言一样，``Markdown` 也使用 `\` 进行转义
 
 ## 标题
 
@@ -43,31 +48,31 @@ _This text is italicized_
 ***All this text is important***
 
 <!-- 下标 -->
-This is a <sub>subscript</sub> text
+This is a ~subscript~ text
 
 <!-- 上标 -->
-This is a <sup>superscript</sup> text
+This is a ^superscript^ text
 ```
 
 ## Code
 
-````markdown
-<!-- 行内 Code 块 -->
-`git status`
+inline: `git status`
 
-<!-- Code 块: 如果你需要在代码块中显示三个反引号 只需要最外层的代码块使用四个反引号 -->
-```
+block:
+
+```javascript
 function test() {
   console.log("notice the blank line before this function?");
 }
 ```
-````
 
 ## 图像
 
 ```markdown
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
 ```
+
+如果需要指定复杂的图像格式，推荐使用 `<img` 标签，视频同理
 
 ## 表格
 
@@ -160,91 +165,35 @@ A footnote can also have multiple lines[^2].
 
 ## 数学表达式
 
-````markdown
-<!-- 内联表达式 -->
-$`\sqrt{3x-1}+(1+x)^2`$
+inline: $`\sqrt{3x-1}+(1+x)^2`$
 
-<!-- 表达式块 -->
+block: 
+
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
-​```math
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-```
+在数学表达式中显示 `$` 需要转义
 
-<!-- 数学表达式中显示 $ 符号 -->
-$`\sqrt{\$4}`$
-
-<!-- 数学表达式外 -->
-<span>$</span>
-````
+在普通文本中显示 `$` 可以使用 `span` 标签包含
 
 ## 折叠
 
-````
-<details>
-
-<summary>Tips for collapsed sections</summary>
-
-### You can add a header
-
-You can add text within a collapsed section.
-
-You can add an image or a code block, too.
-
-​```ruby
-   puts "Hello World"
-```
-
-</details>
-
-<!-- open 属性设置折叠展开 -->
-
-<details open>
-
-<summary>Tips for expanded sections</summary>
-
-### You can add a header
-
-You can add text within a collapsed section.
-
-You can add an image or a code block, too.
-
-```ruby
-   puts "Hello World"
-```
-
-</details>
-````
-
-## 颜色
-
-```markdown
-`#ffffff` 白色
-`#000000` 黑色
-`rgb(R,G,B)` 蓝色
-`hsl(H,S,L)` 蓝色
-```
+参考链接: [折叠](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github#adding-a-collapsed-section)
 
 ## 关系图
 
 ### Mermaid
 
-````text
-Here is a simple flow chart:
-
-​```mermaid
+```mermaid
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
 ```
-````
 
 ### GeoJSON 交互式地图
 
-````
-​```geojson
+```geojson
 {
   "type": "FeatureCollection",
   "features": [
@@ -270,12 +219,10 @@ graph TD;
   ]
 }
 ```
-````
 
 ### TopoJSON 地图
 
-````
-​```topojson
+```topojson
 {
   "type": "Topology",
   "transform": {
@@ -309,12 +256,10 @@ graph TD;
   "arcs": [[[4000, 0], [1999, 9999], [2000, -9999], [2000, 9999]],[[0, 0], [0, 9999], [2000, 0], [0, -9999], [-2000, 0]]]
 }
 ```
-````
 
 ### STL 3D 模型
 
-````
-​```stl
+```stl
 solid cube_corner
   facet normal 0.0 -1.0 0.0
     outer loop
@@ -346,4 +291,3 @@ solid cube_corner
   endfacet
 endsolid
 ```
-````
