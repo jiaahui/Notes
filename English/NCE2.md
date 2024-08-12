@@ -131,3 +131,23 @@ comb hair 梳头发
 ## Story
 
 I have just received a letter from my brother, Tim. He is in Australia. He has been there for six months. Tim is an engineer. He is working for a big firm and he was already visited a great number of different places in Australia. He has just bounght an Australia car and has gone to Alice Springs, a small town in the centre of Australia. He will soon visit Darwin. From there, He will fly to Perth. My brother has never been abroad before, so he is finding this trip is exciting.
+
+# NCE2L05
+
+## Words
+
+pigeon 鸽子
+
+leave sb a message
+
+cover a distance in st  越过距离
+
+request for sth
+
+spare part  备用零件
+
+customer service  客户服务
+
+## Story
+
+Mr. James Scott has a garage in Silbury and now he has just bounght another garage in Pinhurst. Pinhurst **is only five miles from** Silbury, but Mr. Scott cannot **get a telephone for his new garage**. So he has just bounght twelve pigeons. Yesterday, a pigeon carried the first message from Pinhurst to Silbury. The bird **covered the distance in three minutes**. **Up to now**, Mr. Scott has **sent a great many requests for** spare parts and other urgent messages from one garage to another. **In this way**, he has begun his own private telephone service.
