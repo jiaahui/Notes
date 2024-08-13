@@ -20,7 +20,7 @@ Don't be rude
 
 ## Grammar
 
-一个英语句子的组成：时间，主语，谓语，宾语，形容词或副词，地点，时间
+一个英语句子的组成：时间，主语，谓语，宾语，方式(形容词或副词)，地点，时间
 
 in the corner of the garden
 
@@ -151,3 +151,31 @@ customer service  客户服务
 ## Story
 
 Mr. James Scott has a garage in Silbury and now he has just bounght another garage in Pinhurst. Pinhurst **is only five miles from** Silbury, but Mr. Scott cannot **get a telephone for his new garage**. So he has just bounght twelve pigeons. Yesterday, a pigeon carried the first message from Pinhurst to Silbury. The bird **covered the distance in three minutes**. **Up to now**, Mr. Scott has **sent a great many requests for** spare parts and other urgent messages from one garage to another. **In this way**, he has begun his own private telephone service.
+
+# NCE2L06
+
+## Words
+
+beggar n. 乞丐
+
+pocket money 零花钱
+
+call at = call on = visit 拜访
+
+a botle of ink 一瓶墨水
+
+ask sb for sth
+
+## Grammar
+
+a/an: 泛指某事物 a/an 由是否是元音音标决定
+
+the: 特指某事物
+
+some: 偏肯定
+
+any: 偏否定
+
+## Story
+
+I have just **moved to a house** in Bridge Street. Yesterday a beggar **knocked at** my door. He **asked me for a meal** and a glass of beer. **In return for this**, the beggar **stood on his head** and sang songs. I gave him a meal. He ate the meal and drank the beer. Then he put a piece of cheese in his pocket and went away. Later a neighbor told me about him. Everybody knows him. His name is Percy Buttons. He **calls at** every house in the street **once a month** and always **asks for** a meal and a glass of beer.
