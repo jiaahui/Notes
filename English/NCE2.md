@@ -179,3 +179,39 @@ any: 偏否定
 ## Story
 
 I have just **moved to a house** in Bridge Street. Yesterday a beggar **knocked at** my door. He **asked me for a meal** and a glass of beer. **In return for this**, the beggar **stood on his head** and sang songs. I gave him a meal. He ate the meal and drank the beer. Then he put a piece of cheese in his pocket and went away. Later a neighbor told me about him. Everybody knows him. His name is Percy Buttons. He **calls at** every house in the street **once a month** and always **asks for** a meal and a glass of beer.
+
+# NCE2L07
+
+## Words
+
+detective n. 侦探
+
+airport 机场 airfield 停机坪
+
+valuable diamond 珍贵的钻石
+
+parcel 包裹
+
+steal - stole - stolen
+
+precious stone 珍贵的石头
+
+sand 沙子
+
+knock over the vase 打碎花瓶
+
+## Grammar
+
+过去进行时
+
+- 一个动作过去正在进行
+- was/were doing
+- 常用于表示时间
+- 例如: He knocked at door when I was having breakfast.
+- as/when: did | was/were doing
+- while: was|were doing 严格语法中不使用 did , 但是口语中可以使用不需要区分
+
+## Story
+
+The plane was late and detevtives were waiting at the airport **all morning**. They were expecting **a valuable parcel of** diamonds from South Africa. **A few hours earlier**, someone had told the police that thieves would **try to** steal the diamonds. When the plane arrived, some of the detectives were waiting inside the main building while others were waiting on the airfield. Two men **took the parcel off** the plane and carried it into the **Custome House**. While two detectives were **keeping guard** at the door, two others opened the parcel. **To their surprise**, the precious parcel was full of stones and sand!
+
