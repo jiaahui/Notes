@@ -215,3 +215,41 @@ knock over the vase 打碎花瓶
 
 The plane was late and detevtives were waiting at the airport **all morning**. They were expecting **a valuable parcel of** diamonds from South Africa. **A few hours earlier**, someone had told the police that thieves would **try to** steal the diamonds. When the plane arrived, some of the detectives were waiting inside the main building while others were waiting on the airfield. Two men **took the parcel off** the plane and carried it into the **Custome House**. While two detectives were **keeping guard** at the door, two others opened the parcel. **To their surprise**, the precious parcel was full of stones and sand!
 
+# NCE2L08
+
+## Words
+
+enter the competition
+
+neat path  整齐的小路
+
+make a path  (为未来)铺路
+
+swimming pool
+
+习惯用法: That's neat = That's cool
+
+ripe 成熟的
+
+## Grammar
+
+比较级/最高级
+
+- adj.er/est
+- 单词有几个元音音标就有几个音节
+- 单音节 er/est  small new old
+- 单音节 e 结尾 r/st  large nice
+- 单音节 元+辅结尾 双写辅音字母 big hot fat
+- 双音节 辅+y 变 y 为 i er/est  pretty easy heavy
+- 双音节 more most  famous
+- 双音节 er/est 和 more most 均可  clever
+- 多音节 more most 表肯定 less least 表否定
+- 不规则 good/well - better - best,  bad - worse - worst, much/many - more - most, little - less - least
+- 主语 be adj.er than 比较对象 如果比较对象是“我”，使用 I 比 me 更正式
+- 主语 be the adj.est n. 范围
+- My mom is the kindest person in the world  世上只有妈妈好
+- She id the most beautiful girl I have ever met/seen.
+
+## Story
+
+Joe Sanders has the most beautiful garden in our town. Nearly, everybody **enters for** 'The Nicest Garden Competition' each year, but Joe wins every time. Bill Frith's garden is larger than Jos's. Bill works harder than Jos and grows more flowers and vegetables, but Jos's garden is more interesting. He has **made neat paths** and has **built a wooden bridge** over a pool. I like gardens too, but I don't like hard work. Every year I enter for the garden competition too, and I always **win a little prize** for the worst garden in the town!

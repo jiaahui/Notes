@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/Markdown.md",
+                "file": "English/NCE2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/Markdown.md",
+                "file": "English/NCE2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tools/Markdown.md",
+                "file": "English/NCE2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tools/Markdown.md"
+                "file": "English/NCE2.md"
               }
             }
           }
@@ -146,13 +146,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "1bf692ec1820885e",
+  "active": "059b03dc229c2204",
   "lastOpenFiles": [
+    "Tools/Markdown.md",
     "Tools/C++ Development Setup.md",
     "Tools/CPP Environment.md",
     "English/NCE2.md",
     "Programming/C++/Tips.md",
-    "Tools/Markdown.md",
     "Programming/C++",
     "Programming",
     "test/test Github Pictures.md",
