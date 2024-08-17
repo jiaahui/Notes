@@ -248,7 +248,7 @@ ripe 成熟的
 - 主语 be adj.er than 比较对象 如果比较对象是“我”，使用 I 比 me 更正式
 - 主语 be the adj.est n. 范围
 - My mom is the kindest person in the world  世上只有妈妈好
-- She id the most beautiful girl I have ever met/seen.
+- She is the most beautiful girl I have ever met/seen.
 
 ## Story
 
