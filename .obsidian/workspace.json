@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "English/NCE2.md",
+                "file": "Programming/Algorithm/Algorithm.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "English/NCE2.md",
+                "file": "Programming/Algorithm/Algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "English/NCE2.md",
+                "file": "Programming/Algorithm/Algorithm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/NCE2.md"
+                "file": "Programming/Algorithm/Algorithm.md"
               }
             }
           }
@@ -146,12 +146,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "059b03dc229c2204",
+  "active": "1bf692ec1820885e",
   "lastOpenFiles": [
+    "English/NCE2.md",
     "Tools/Markdown.md",
     "Tools/C++ Development Setup.md",
     "Tools/CPP Environment.md",
-    "English/NCE2.md",
     "Programming/C++/Tips.md",
     "Programming/C++",
     "Programming",

@@ -13,7 +13,7 @@ sudo apt install -y g++, build-essential
 
 ### WSL
 
-参考 Lunux 安装
+https://learn.microsoft.com/en-us/windows/wsl/install
 
 ### MSYS2
 
