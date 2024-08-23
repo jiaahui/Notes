@@ -253,3 +253,40 @@ ripe 成熟的
 ## Story
 
 Joe Sanders has the most beautiful garden in our town. Nearly, everybody **enters for** 'The Nicest Garden Competition' each year, but Joe wins every time. Bill Frith's garden is larger than Jos's. Bill works harder than Jos and grows more flowers and vegetables, but Jos's garden is more interesting. He has **made neat paths** and has **built a wooden bridge** over a pool. I like gardens too, but I don't like hard work. Every year I enter for the garden competition too, and I always **win a little prize** for the worst garden in the town!
+
+# NCE2L09
+
+## Words
+
+welcome to sw
+
+a crowd of  一群
+
+gather round  聚集
+
+hand 指针  minute/second/hour hand
+
+shout to sb 喊  shout at sb 愤怒地喊
+
+refuse to do sth
+
+laugh at sb  嘲笑
+
+## Grammar
+
+on + 具体某天
+
+- on Friday | on 1 January | on August the twenty-forth | on the thirteen of April
+
+in + 年/季/月
+
+- in 2001 | in spring | in October | in the morning
+
+at + 时间点
+
+- at 8 o'clock | at 8:00 | at midnight | at teatime | at lunchtime
+
+## Story
+
+On Wednesday evening, we went to the Town Hall. It was **the last day of the year** and **a large crowd of** people had gathered under the Town Hall clock. It would strike twelve **in twenty minutes' time**. Fifteen minutes passed and then, at five to twelve, the clock stopped. The big minute hand did not move. We waited and waited, but nothing happened. Suddenly someone shouted "It is two past twelve! The clock has stopped!" I looked at my clock. It was true. The big clock **refused to** welcome the New Year. **At that moment** everybody **began to** laugh and sing.
+
