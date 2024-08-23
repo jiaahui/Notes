@@ -138,6 +138,91 @@ cout << fixed << setprecision(6) << left << endl;  // #include <iomanip>
 
 ## 高精度算术计算
 
+### 加法
+
+```c++
+/* 高精度加法 */
+string add(string num1, string num2) {
+    reverse(num1.begin(), num1.end());
+    reverse(num2.begin(), num2.end());
+    string result;
+    int carry = 0;  // 进位
+    int i = 0;
+    while (i < num1.size() || i < num2.size()) {
+        if (i < num1.size()) carry += num1[i] - '0';
+        if (i < num2.size()) carry += num2[i] - '0';
+        result += carry % 10 + '0';
+        carry /= 10;
+        i++;
+    }
+    // 剩余进位处理
+    if (carry > 0) result += carry + '0';
+    reverse(result.begin(), result.end());
+    return result;
+}
+```
+
+### 减法
+
+```c++
+/* 高精度减法 较大的正数 - 较小的正数 */
+string sub(string num1, string num2) {
+    string result;
+    reverse(num1.begin(), num1.end());
+    reverse(num2.begin(), num2.end());
+    int borrow = 0;  // 借位
+    for (int i = 0; i < num1.size(); i++) {
+        borrow = num1[i] - '0' - borrow;
+        if (i < num2.size()) borrow -= num2[i] - '0';
+        result += (borrow + 10) % 10 + '0';  // 模运算避免负值
+        borrow = borrow < 0 ? 1 : 0;  // 更新借位标记
+    }
+    // 先导零处理
+    while (result.size() > 1 && result.back() == '0') result.pop_back();
+    reverse(result.begin(), result.end());
+    return result;
+}
+```
+
+### 乘法
+
+```c++
+/* 高精度乘法 较大的正数 * 普通正数 */
+string mul(string num1, int num2) {
+    string result;
+    reverse(num1.begin(), num1.end());
+    int n = num1.size();
+    int tmp = 0;
+    // 乘法逻辑 注意循环条件
+    for (int i = 0; i < n || tmp; i++) {
+        if (i < n) tmp += (num1[i] - '0') * num2;
+        result += tmp % 10 + '0';
+        tmp /= 10;
+    }
+    // 先导零处理
+    while (result.size() > 1 && result.back() == '0') result.pop_back();
+    reverse(result.begin(), result.end());
+    return result;
+}
+```
+
+### 除法
+
+```c++
+/* 高精度除法 较大的正数 / 普通正数 */
+pair<string, int> div(string num1, int num2) {
+    string result;
+    int rem = 0;
+    for (int i = 0; i < num1.size(); i++) {
+        rem = rem * 10 + num1[i] - '0';
+        result += rem / num2 + '0';
+        rem %= num2;
+    }
+    while (result.size() > 1 && result.front() == '0') result.erase(0, 1);  // 删除从 0 开始的 1 个字符
+    return {result, rem};
+}
+```
+
 
 
 ## 前缀和差分
