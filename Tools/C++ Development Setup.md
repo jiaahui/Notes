@@ -11,7 +11,15 @@ sudo apt install -y g++, build-essential
 
 ## Windows
 
-### WSL
+### VS Code
+
+安装 [Visual Studio Code](https://code.visualstudio.com/)
+
+安装 `C/C++`扩展 `WSL`扩展
+
+Settings: 搜索 `Clang_format_fallback Style` 设置为 `{ BasedOnStyle: Microsoft, BreakBeforeBraces: Attach }`
+
+### WSL (推荐)
 
 https://learn.microsoft.com/en-us/windows/wsl/install
 
@@ -73,11 +81,3 @@ goto :eof
 ```
 
 这样，如果只输入 `msys2` 进入 `MSYS2`, 如果输入 `msys2 <msys2 cli>` 则执行 `MSYS2` 内部命令
-
-### 安装 VS Code
-
-安装 [Visual Studio Code](https://code.visualstudio.com/)
-
-安装 `C/C++` 扩展
-
-Settings: 搜索 `Clang_format_fallback Style` 设置为 `{ BasedOnStyle: Microsoft, BreakBeforeBraces: Attach }`
