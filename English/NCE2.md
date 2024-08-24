@@ -290,3 +290,31 @@ at + 时间点
 
 On Wednesday evening, we went to the Town Hall. It was **the last day of the year** and **a large crowd of** people had gathered under the Town Hall clock. It would strike twelve **in twenty minutes' time**. Fifteen minutes passed and then, at five to twelve, the clock stopped. The big minute hand did not move. We waited and waited, but nothing happened. Suddenly someone shouted "It is two past twelve! The clock has stopped!" I looked at my clock. It was true. The big clock **refused to** welcome the New Year. **At that moment** everybody **began to** laugh and sing.
 
+# NCE2L10
+
+## Words
+
+musical instrument  乐器
+
+clavichord  古钢琴 != piano
+
+shock  震惊
+
+be allowed to do sth  **被**允许去做某事
+
+allow sb to do sth  允许去做某事
+
+## Grammar
+
+被动 be done
+
+- be 表示时态
+- am/is/are done  一般现在时
+- was/were done  一般过去时
+- am/is/are being done  现在进行时
+- have/has been done  现在完成时
+
+## Story
+
+We have an old musical instrument. It is called clavichord. It **was made in Germany** in 1681. Our clavichord **is kept** in the living room. It was **belonged to** our family for a long time. The instrument **was bought** by my grandfather many years ago. Recently it **was demaged** by a visitor. She tried to play jazz on it. She stroke keys too hard and two of the strings **were broken**. My father **was shocked**. Now we **are not allowed to** touch it. It **is being repaired** by a friend of my father's.
+
