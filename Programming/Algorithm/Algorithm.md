@@ -227,21 +227,107 @@ pair<string, int> div(string num1, int num2) {
 
 ## 前缀和差分
 
+前缀和是一种数据预处理的方法，适用于快速查询区间的值的情况
+
+差分是前缀的逆运算，适用于操作区间的情况
+
+### 一维前缀
+
+```c++
+for (int i = 1; i <= n; i++) prefix[i] = prefix[i-1] + arr[i];  // 索引 0 留空可以简化编程
+// 区间 left - right 的和
+int result = prefix[right] - prefix[left - 1];
+```
+
+### 二维前缀
+
+```c++
+for (int i = 1; i <= n; i++) 
+    for (int j = 1; j <= m; j++)
+    	prefix[i][j] = prefix[i-1][j] + prefix[i][j-1] - prefix[i-1][j-1] + arr[i][j];
+// 区域 x1,y1 - x2,y2 的和
+int result = prefix[x2][y2] - prefix[x2][y1 - 1] - prefix[x1 - 1][y2] + prefix[x1 - 1][y1 - 1];
+```
+
+### 一维差分
+
+```c++
+/* 差分定义构造 */
+for (int i = 1; i <= n; i++) difference[i] = arr[i] - arr[i - 1];
+/* 通过插入构造  [left, right] 区间每个数 + value */
+void insert(int left, int right, int value) {
+    difference[left] += value;
+    difference[right + 1] -= value;
+}
+
+for (int i = 1; i <= n; i++) insert(i, i, arr[i]);
+```
+
+### 二维差分
+
+```c++
+void insert(int x1, int y1, int x2, int y2, int val) {
+    diff[x1][y1] += val;
+    diff[x1][y2+1] -= val;
+    diff[x2+1][y1] -= val;
+    diff[x2+1][y2+1] += val;
+}
+/* 差分 -> 原二维数组 */
+for (int i = 1; i <= n; i++) 
+    for (int j = 1; j <= m; j++) 
+        arr[i][j] = arr[i - 1][j] + arr[i][j - 1] - arr[i-1][j-1] + diff[i][j];
+```
+
 
 
 ## 双指针
 
+双指针是一种解决问题的思想，通常可以将 $O(n^2)$ 时间复杂度降低到 $O(n)$ 时间复杂度
 
+常见的双指针有：
+
+- 快慢指针
+- 相向指针
 
 ## 位运算
+
+```c++
+/* 判断第 i 位是 1 或 0 */
+bool is_one = x >> i & 1;
+/* 截取二进制表示中的最后一个 1 和后面的全部 0 */
+// e.g.  10100010011000100010  -> 10
+int lowbit(int x) {
+    return x & (-x);
+}
+```
 
 
 
 ## 离散化
 
+```c++
+vector<int> nodes;  // 存储使用到的数轴的点
+sort(nodes.begin(), nodes.end());  // 排序
+nodes.erase(unique(nodes.begin(), nodes.end()), nodes.end());  // 去重操作
+
+int find(int x) {
+    int left = 0, right = alls.size() - 1;
+    while (left < right) {
+        int mid = (left + right) >> 1;
+        if (nodes[mid] >= x) right = mid;
+        else left = mid + 1;
+    }
+    return right + 1;
+}
+```
 
 
-## 区间合并
+
+## 单链表
+
+
+
+
 
 
 
