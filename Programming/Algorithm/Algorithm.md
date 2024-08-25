@@ -325,7 +325,94 @@ int find(int x) {
 
 ## 单链表
 
+```c++
+// head: 头节点索引
+// n[i]: 数据
+// ne[i]: 指针
+// idx: 下一个位置的指针
+int head, n[N], ne[N], idx;
 
+void init() {
+    head = -1;
+    idx = 0;
+}
+// 头节点后插入节点
+void insert_to_head(int x) {
+    n[idx] = x;
+    ne[idx] = head;
+    head = idx;
+    idx++;
+}
+// e[k] 后插入新节点
+void insert(int k, int x) {
+    n[idx] = x;
+    ne[idx] = ne[k];
+    ne[k] = idx;
+    idx++;
+}
+// 删除 e[k]
+void remove(int k) {
+    ne[k] = ne[ne[k]];
+}
+```
+
+
+
+## 双链表
+
+```c++
+int e[N], left[N], right[N], idx;
+
+void init() {
+    right[0] = 1;  // e[0]: 空左端点
+    left[1] = 0;   // e[1]: 空右端点
+    idx = 2;
+}
+// 在 e[k] 右侧插入新节点
+void insert(int k, int x) {
+    e[idx] = x;
+    // 先左后右调整指针
+    left[idx] = k;
+    right[idx] = right[k];
+    left[right[k]] = idx;
+    right[k] = idx;
+    idx++;
+}
+// 删除 e[k] 节点
+void remove(int k) {
+    left[right[k]] = left[k];
+    rigth[left[k]] = right[k];
+}
+```
+
+
+
+## 模拟栈
+
+```c++
+int e[N], idx;
+
+void init() {
+    idx = 0;
+}
+
+void push(int x) {
+    e[idx++] = x;
+}
+
+void pop() {
+    idx--;
+}
+
+bool empty() {
+    return idx == 0;
+}
+
+int top() {
+    if (!empty()) return e[idx - 1];
+    else return 0x3f3f3f3f;
+}
+```
 
 
 
