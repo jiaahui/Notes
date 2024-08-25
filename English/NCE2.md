@@ -318,3 +318,18 @@ allow sb to do sth  允许去做某事
 
 We have an old musical instrument. It is called clavichord. It **was made in Germany** in 1681. Our clavichord **is kept** in the living room. It was **belonged to** our family for a long time. The instrument **was bought** by my grandfather many years ago. Recently it **was demaged** by a visitor. She tried to play jazz on it. She stroke keys too hard and two of the strings **were broken**. My father **was shocked**. Now we **are not allowed to** touch it. It **is being repaired** by a friend of my father's.
 
+# NCE2L11
+
+## Words
+
+turn  n. 行为 举止 v. 变得  It's turn you. 轮到你了
+
+One good turn deserves another.  礼尚往来/好人有好报
+
+You deserve that.  你值得拥有/你活该
+
+get a good salary
+
+## Story
+
+I was having dinner at a restaurant when Tony Steele came in. Tony worked in a lawyer's office years ago, but he is now working at a bank. He gets a good salary, but he always borrows money from his friends and never pays it back. Tony saw me and came and sat at the same table. He has never borrowed money from me. While he was eating, I asked him to lend me twenty pounds. To my surprise, he gave me the money immediately. "I have never borrowed any money from you." Tony said, "So now you can pay for my dinner."
