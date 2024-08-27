@@ -333,3 +333,29 @@ get a good salary
 ## Story
 
 I was having dinner at a restaurant when Tony Steele came in. Tony worked in a lawyer's office years ago, but he is now working at a bank. He gets a good salary, but he always borrows money from his friends and never pays it back. Tony saw me and came and sat at the same table. He has never borrowed money from me. While he was eating, I asked him to lend me twenty pounds. To my surprise, he gave me the money immediately. "I have never borrowed any money from you." Tony said, "So now you can pay for my dinner."
+
+# NCE2L12
+
+## Words
+
+Good Luck!  Lucky dog  幸运儿(形容人)
+
+captain  船长 队长
+
+sail  (船)航行 启航
+
+harbor  港口
+
+be proud of sb  骄傲的
+
+## Grammar
+
+一般将来时
+
+- will / shall be
+- shall 仅用于第一人称 I, We
+- 否定 won't / shan't
+
+## Story
+
+Our neighbor, Captain Charles Alison, will **sail from** Portsmouth tomorrow. We'll meet him at the harbor early in the morning. He will be in his little boat, Topsail. Topsail is a famous little boat. It has sailed across the Atlantic many times. Captain Alison will **set out** at eight o'clock so we will have **plenty of** timws. We'll see his boat and then we'll say goodbye to him. He will **be away** for two months. We **are very proud of** him. Hw will **take part in** an important race across the Atlantic.

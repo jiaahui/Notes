@@ -416,6 +416,149 @@ int top() {
 
 
 
+## 表达式求值
+
+```c++
+#include <iostream>
+#include <stack>
+#include <string>
+#include <map>
+
+using namespace std;
+
+stack<int> nums;  // 数字栈
+stack<char> ops;  // 符号栈
+map<int, int> rk{ {'+', 1}, {'-', 1}, {'*', 2}, {'/', 2} };
+// 计算表达式
+void eval() {
+    int num2 = nums.top();
+    nums.pop();
+    int num1 = nums.top();
+    nums.pop();
+    char op = ops.top();
+    ops.pop();
+    int result;
+    if (op == '+') result = num1 + num2;
+    else if (op == '-') result = num1 - num2;
+    else if (op == '*') result = num1 * num2;
+    else result = num1 / num2;
+    
+    nums.push(result);
+}
+
+int main() {
+    string s;
+    cin >> s;
+    for (int i = 0; i < s.size(); i++) {
+        if (isdigit(s[i])) {
+            // 连续数字
+            int num = 0, j = i;
+            while (j < s.size() && isdigit(s[j])) {
+                num = num * 10 + s[j] - '0';
+                j++;
+            }
+            nums.push(num);
+            i = j - 1;
+        }
+        else if (s[i] == '(') ops.push(s[i]);
+        else if (s[i] == ')') {
+            while (ops.top() != '(') eval();
+            ops.pop();
+        }
+        else {
+            // 关键: 操作符优先级
+            while (!ops.empty() && rk[ops.top()] >= rk[s[i]]) eval();
+            ops.push(s[i]);
+        }
+    }
+    
+    while (!ops.empty()) eval();
+    cout << nums.top() << endl;
+    return 0;
+}
+```
+
+## 单调栈
+
+```c++
+/* 递增单调栈: 输出左侧第一个比它小的元素 */
+int stk[N], idx;
+
+while (idx && stk[idx] >= x) idx--;  // 如果栈顶元素大于当前值 栈顶元素出栈 保证栈中元素递增
+if (idx == 0) cout << -1 << " ";  // 不存在比它小的元素
+else cout << stk[idx] << " ";  // 查找成功
+stk[++idx] = x;  // 当前值插入单调栈
+```
+
+
+
+## 单调队列 (滑动窗口)
+
+题型: 查找滑动窗口中的最小值/最大值
+
+```c++
+// 假设窗口大小 k
+for (int i = 0; i < n; i++) {
+    while (q.size() && check_head(q.front()) q.pop();
+    while (q.size() && check(q.front(), i)) tt -- ;
+    q.push(i);
+}
+```
+
+
+
+## KMP 模式匹配
+
+```c++
+char s[1000010], p[100010];  // s 和 p 从索引 1 开始存储字符串
+int ne[100010];  // 使用 ne 避免和标准库 next 重名
+// 计算 next 数组
+for (int i = 2, j = 0; i < m; i++) {
+    while (j && p[i] != p[j+1]) j = ne[j];
+    if (p[i] == p[j+1]) j++;
+    ne[i] = j;
+}
+// 匹配过程
+for (int i = 1, j = 0; i < n; i++) {
+    while (j && s[i] != p[j+1]) j = ne[j];
+    if (s[i] == p[j+1]) j++;
+    if (j == m) {
+        // 成功匹配 输出 s 的起始坐标
+        cout << i - m << endl;
+        // 继续匹配 如果不需要继续匹配可以直接 break
+        j = ne[j];
+    }
+}
+```
+
+
+
+## Tire 字典树
+
+```c++
+int son[N][26], cnt[N], idx;
+
+void insert(char *str) {
+    int p = 0;
+    for (int i = 0; str[i]; i++) {
+        int u = str[i] - 'a';
+        if (!son[p][u]) son[p][u] = ++idx;
+        p = son[p][u];
+    }
+    cnt[p]++;
+}
+
+int query(char *str) {
+    int p = 0;
+    for (int i = 0; str[i]; i++) {
+        int u = str[i] - 'a';
+        if (!son[p][u]) return 0;
+        p = son[p][u];
+    }
+    return cnt[p];
+}
+```
+
 
 
 ## 注意事项
