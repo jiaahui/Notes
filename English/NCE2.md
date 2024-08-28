@@ -355,7 +355,38 @@ be proud of sb  骄傲的
 - will / shall be
 - shall 仅用于第一人称 I, We
 - 否定 won't / shan't
+- 一般疑问句 will 提前
 
 ## Story
 
 Our neighbor, Captain Charles Alison, will **sail from** Portsmouth tomorrow. We'll meet him at the harbor early in the morning. He will be in his little boat, Topsail. Topsail is a famous little boat. It has sailed across the Atlantic many times. Captain Alison will **set out** at eight o'clock so we will have **plenty of** timws. We'll see his boat and then we'll say goodbye to him. He will **be away** for two months. We **are very proud of** him. Hw will **take part in** an important race across the Atlantic.
+
+# NCE2L13
+
+## Words
+
+a group of  一群
+
+pop singer  流行歌手
+
+join the club  加入俱乐部
+
+give a performance  演出
+
+on this occasion  在这个场景下
+
+occasionally  时不时地
+
+## Grammar
+
+将来进行时
+
+- will be doing
+- 将来动作正在进行
+- 表计划
+- 现在进行时 和 将来进行时 表计划的时候 建议和时间联合使用 避免歧义
+
+## Story
+
+The Greenwood Boys are **a group of** pop singers. At present, they are vising **all parts of the country**. They will be arriving here tomorrow. They will be coming by train and most of the young people in the room will be meeting them at the station. Tomorrow evening they will be singing at the Workers' Club. The Greenwood Boys will be staying for five days. During this time, they will **give five performances**. **As usual** the police will **have a difficult time**. They will be trying to **keep order**. It is always the same **on these occasions**.
+
