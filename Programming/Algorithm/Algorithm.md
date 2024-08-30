@@ -569,6 +569,189 @@ int query(char *str) {
 
 
 
+## Heap
+
+### Heap sort
+
+
+
+### Heap
+
+
+
+## Hash Table
+
+### Hash Table
+
+
+
+### String Hash
+
+
+
+
+
+## Graph
+
+Dijkstra: 不允许负权和自环  源点到汇点的最短路
+
+bellman-ford: 适用于存在经过的边数有限制的问题  全局最短路
+
+Bellman - ford 算法是求含负权图的单源最短路径的一种算法，效率较低，代码难度较小。其原理为连续进行松弛，在每次松弛时把每条边都更新一下，若在 n-1 次松弛后还能更新，则说明图中有负环，因此无法得出结果，否则就完成。
+
+### Dijkstra
+
+```c++
+int edges[N][N];  // 使用邻接矩阵保存边
+int distances[N];  // 1号点到其他点的距离  从索引1开始
+int state[N];  // 是否已经找到到达该点的最短距离
+
+int dijkstra(int n) {  // n: 表示节点的数量
+    memset(distances, 0x3f, sizeof(distances));  // 初始化起点到终点的距离
+    distances[1] = 0;  // 起点
+    for (int i = 1; i < n; i++) {  // 控制循环数量 无实际意义
+        int tmp = -1;  // 保存最短距离的节点
+        for (int j = 1; j <= n; j++) {  // 循环遍历未找到最短路的节点
+            if (!state[j] && (tmp == -1 || distances[j] < distances[tmp])) tmp = j;
+        }
+        state[tmp] = 1;  // 本轮循环中找到的最短距离的点
+        for (int j = 1; j <= n; j++) {  // 使用这个点更新其它未找到最短距离的点的距离
+            distances[j] = min(distances[j], distances[tmp] + edges[tmp][j]);
+        }
+    }
+    return distances[n] == 0x3f3f3f3f ? -1 : distances[n];  // 判断是否找到最短路
+}
+```
+
+使用堆优化的`Dijkstra`
+
+```c++
+const int N = 1000010;
+int h[N], e[N], w[N], ne[N], idx;
+int n, m;
+int distances[N], states[N];
+
+void add(int a, int b, int c) {
+    e[idx] = b;
+    w[idx] = c;
+    ne[idx] = h[a];
+    h[a] = idx++;
+}
+
+int dijkstra() {
+    memset(distances, 0x3f, sizeof(distances));  // 初始化距离
+    distances[1] = 0;  // 起点
+    // priority_queue<pair<int, int>> heap;  // 默认最大堆
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> heap;  // 最小堆
+    heap.push({0, 1});  // <距离, 编号>
+    while (heap.size()) {
+        auto pr = heap.top();  // 堆优化加速了查找最小距离的节点的时间
+        heap.pop();
+        int d = pr.first, ver = pr.second;
+        if (states[ver]) continue;
+        states[ver] = 1;
+        for (int i = h[ver]; i != -1; i = ne[i]) {
+            int j = e[i];
+            if (distances[j] > distances[ver] + w[i]) {
+                distances[j] = distances[ver] + w[i];
+                heap.push({distances[j], j});  // 注意
+            }
+        }
+    }
+    return distances[n] == 0x3f3f3f3f ? -1 : distances[n];
+}
+```
+
+### Bellman Ford
+
+```c++
+const int N = 510, M = 10010;
+struct {
+    int a;
+    int b;
+    int w;
+} edges[M];  // 边
+int dist[N], back[N];
+int n, m, k;
+
+int bellman_ford() {
+    memset(dist, 0x3f, sizeof(dist));
+    dist[1] = 0;
+    // k次循环 k是经过边数的限制
+    for (int i = 0; i < k; i++) {
+        memcpy(back, dist, sizeof(dist));
+        // 遍历所有边
+        for (int j = 0; j < m; j++) {
+            int a = edges[j].a, b = edges[j].b, w = edges[j].w;
+            dist[b] = min(dist[b], back[a] + w);
+        }
+    }
+    return dist[n];  // 注意根据 dist[n] > 0x3f3f3f3f / 2  判断是否有解
+}
+```
+
+### SPFA
+
+```c++
+int h[N], e[N], w[N], ne[N], idx;
+int dist[N], st[N];
+
+void add(int a, int b, int c) {
+    e[idx] = b;
+    w[idx] = c;
+    ne[idx] = h[a];
+    h[a] = idx++;
+}
+
+int spfa() {
+    memset(dist, 0x3f, sizeof(dist));
+    dist[1] = 0;
+    queue<int> q;
+    q.push(1);
+    st[1] = 1;
+    
+    while (q.size()) {
+        int t = q.front();
+        q.pop();
+        st[t] = 0;
+        for (int i = h[t]; i != -1; i = ne[i]) {
+            int j = e[i];
+            if (dist[j] > dist[t] + w[i]) {
+                dist[j] = dist[t] + w[i];
+                if (!st[j]) {
+                    q.push(j);
+                    st[j] = 1;
+                }
+            }
+        }
+    }
+    
+    return dist[n];
+}
+```
+
+### Floyd
+
+```c++
+// 初始化：
+    for (int i = 1; i <= n; i ++ )
+        for (int j = 1; j <= n; j ++ )
+            if (i == j) d[i][j] = 0;
+            else d[i][j] = INF;
+
+// 算法结束后，d[a][b]表示a到b的最短距离
+void floyd() {
+    for (int k = 1; k <= n; k ++ )
+        for (int i = 1; i <= n; i ++ )
+            for (int j = 1; j <= n; j ++ )
+                d[i][j] = min(d[i][j], d[i][k] + d[k][j]);
+}
+```
+
+
+
+
+
 ## 注意事项
 
 - 当数据规模超过一百万量级的时候，需要使用快速输入输出或者`scanf`和`printf`
