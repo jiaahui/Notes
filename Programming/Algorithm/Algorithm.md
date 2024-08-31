@@ -748,16 +748,86 @@ void floyd() {
 }
 ```
 
+### Prim
+
+```c++
+void prim() {
+    memset(dt, 0x3f, sizeof(dt));
+    int ret = 0;  // 最小生成树的权重之和
+    dt[1] = 0;
+    for (int i = 0; i < n; i++) {
+        int t = -1;  // 距离连通块权重最小的节点
+        for (int j = 1; j <= n; j++) {
+            if (!st[j] && (t == -1 || dt[j] < dt[t])) t = j;
+        }
+        // 判断孤立点
+        if (dt[t] == 0x3f3f3f3f) {
+            cout << "impossible";
+            return;
+        }
+        st[t] = 1;
+        ret += dt[t];
+        // 更新其它节点的距离
+        for (int j = 1; j <= n; j++) {
+            if (!st[j] && g[t][j] < dt[j]) {
+                dt[j] = g[t][j];
+                // pre[j] = t;  // 标记节点的前驱 如果需要输出最小生成树的结构的话 需要这行代码
+            }
+        }
+    }
+    cout << ret;
+}
+```
+
+### Krskl
+
+```c++
+
+```
+
+### 匈牙利算法 $O(nm)$
+
+```c++
+int h[500], e[100010], ne[100010], idx;  // 邻接表
+int st[510], match[510];
+
+void add(int a, int b) {
+    e[idx] = b;
+    ne[idx] = h[a];
+    h[a] = idx++;
+}
+// 匹配
+bool find(int x) {
+    for (int i = h[x]; i != -1; i = ne[i]) {
+        int b = e[i];
+        if (!st[b]) {
+            st[b] = 1;
+            if (match[b] == 0 || find(match[b])) {
+                match[b] = x;
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+int ret = 0;
+for (int i = 1; i <= n1; i++) {
+    memset(st, 0, sizeof st);
+    if (find(i)) ret++;
+}
+```
 
 
 
 
-## 注意事项
+
+## Tricks
 
 - 当数据规模超过一百万量级的时候，需要使用快速输入输出或者`scanf`和`printf`
 
   ```c++
-  io::sync_with_stdio(false);
+  ios::sync_with_stdio(false);
   cin.tie(0);
   cout.tie(0);
   // 注意使用以上设置的时候  scanf 和 printf 失效无法使用

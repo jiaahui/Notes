@@ -390,3 +390,36 @@ occasionally  时不时地
 
 The Greenwood Boys are **a group of** pop singers. At present, they are vising **all parts of the country**. They will be arriving here tomorrow. They will be coming by train and most of the young people in the room will be meeting them at the station. Tomorrow evening they will be singing at the Workers' Club. The Greenwood Boys will be staying for five days. During this time, they will **give five performances**. **As usual** the police will **have a difficult time**. They will be trying to **keep order**. It is always the same **on these occasions**.
 
+# NCE2L14
+
+## Words
+
+have an amusing experience
+
+wave to sb  招手
+
+lift = hitchhike  便车
+
+take a lift = ask for a lift
+
+A give B a lift
+
+reply to email / letter
+
+native language = mother tongue  母语
+
+go on a journey
+
+## Grammar
+
+过去完成时
+
+- had done
+- 过去的过去  When I arrived at the party, Tom had gone home.
+- A - B - now  A(过去的过去)对B(过去)产生影响
+- A - B - now  动作从过去A持续或重复到B
+
+## Story
+
+I **had an amusing experience** last year. After I had left a small village in the south of France, I **drove on to** the next town. On the way, a young man **waved to me**. I stopped and he **asked me for a lift**. As soon as he had got into the car, I said good morning to him **in Franch** and he replied in the same language. **Apart from** a few words, I do not know any Franch **at all**. **Neither of** us spoke during the journey. I had nearly reached the town, when the young man suddenly said very slowly, "Do you speak English?" As I soon **learnt**, he was English himself. 
+
