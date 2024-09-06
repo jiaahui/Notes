@@ -820,6 +820,147 @@ for (int i = 1; i <= n1; i++) {
 
 
 
+## Math
+
+### 质数
+
+#### 试除法判定质数 $O(\sqrt{n})$
+
+```c++
+// 试除法判断质数
+bool is_prime(int x) {
+    if (x < 2) return false;
+    // 循环条件建议使用 i <= n / i
+    // sqrt(x) 计算慢   i * i <= x 存在溢出风险
+    for (int i = 2; i <= x / i; i++) {
+        if (x % i == 0) return false;
+    }
+    return true;
+}
+```
+
+#### 试除法分解质因数 $O(\sqrt{n})$
+
+```c++
+void divide(int x) {
+    for (int i = 2; i <= x / i; i++) {
+        if (x % i == 0) {
+            int cnt = 0;
+            while (x % i == 0) {
+                x /= i;
+                cnt++;
+            }
+            printf("%d %d\n", i, cnt);  // 底数 指数
+        }
+    }
+    if (x > 1) printf("%d %d\n", x, 1);
+}
+```
+
+#### 埃氏筛法 $O(nlog(log(n)))$
+
+```c++
+const int N = 1000010;
+int primes[N], cnt;
+bool st[N];  // 合数标记
+
+// 埃氏筛法
+void get_primes(int n) {
+    for (int i = 2; i <= n; i++) {
+        if (!st[i]) {
+            primes[cnt++] = i;
+            // 埃氏筛法: 只需要处理质数的倍数不需要处理全部数据的倍数
+            for (int j = i + i; j <= n; j += i) {
+                st[j] = true;  // 标记为合数
+            }
+        }
+    }
+}
+```
+
+#### 线性筛法
+
+```c++
+const int N = 1000010;
+int primes[N], cnt;
+bool st[N];  // 合数标记
+
+void get_primes(int n) {
+    for (int i = 2; i <= n; i++) {
+        if (!st[i]) {
+            primes[cnt++] = i;
+        }
+        // 线性筛法: 合数只能被它的最小质因数筛掉
+        for (int j = 0; primes[j] <= n / i; j++ ) {
+            st[primes[j] * i] = true;
+            if (i % primes[j] == 0) break;
+        }
+    }
+}
+```
+
+
+
+### 约数
+
+#### 试除法求约数
+
+```c++
+vector<int> get_divisors(int n) {
+    vector<int> ret;
+    for (int i = 1; i <= n / i; i++) {
+        if (n % i == 0) {  // 如果 n 可以被 i 整除
+            ret.push_back(i);  // i 就是 n 的一个约数, n/i 是另一个约数
+            if (i != n / i) ret.push_back(n / i);  // 避免重复添加
+        }
+    }
+    sort(ret.begin(), ret.end());
+    return ret;
+}
+```
+
+#### 最大公约数 欧几里得算法
+
+```c++
+int gcd(int a, int b) {
+    return b ? gcd(b, a%b) : a;
+}
+```
+
+
+
+## Dynamic Programming
+
+### 背包问题
+
+#### 01背包
+
+```c++
+// 遍历物品
+for (int i = 1; i <= n; i++) {
+    // 逆序遍历容量
+    for (int j = m; j; j--) {
+        if (w[i] < i) {
+            dp[j] = max(dp[j], dp[j - w[i]] + v[i]);
+        }
+    }
+}
+```
+
+#### 完全背包
+
+```c++
+// 遍历物品
+for (int i = 1; i <= n; i++) {
+    // 顺序遍历容量 通过循环省略条件判断
+    for (int j = w[i]; j <= m; j++) {
+        dp[j] = max(dp[j], dp[j - w[i]] + v[i]);
+    }
+}
+```
+
+
+
 
 
 ## Tricks
