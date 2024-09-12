@@ -564,7 +564,15 @@ int query(char *str) {
 ## 并查集
 
 ```c++
+inr arr[N];
+// 查找
+int find(int x) {
+    if (arr[x] != x) arr[x] = find(arr[x]);
+    return arr[x];
+}
 
+// 合并
+arr[find(x)] = find(y);
 ```
 
 
@@ -573,9 +581,69 @@ int query(char *str) {
 
 ### Heap sort
 
+```c++
+#include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+int heap[N], sz;
+
+void down(int i) {
+    int t = i;
+    if (2 * i <= sz && heap[t] > heap[2 * i]) t = 2 * i;
+    if (2 * i + 1 <= sz && heap[t] > heap[2 * i + 1]) t = 2 * i + 1;
+    if (t != i) {
+        swap(heap[i], heap[t]);
+        down(t);
+    }
+}
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+    sz = n;
+    for (int i = 1; i <= n; i++) cin >> heap[i];
+    for (int i = n/2; i; i--) down(i);
+    while (m--) {
+        cout << heap[1] << " ";
+        heap[1] = heap[sz--];
+        down(1);
+    }
+    return 0;
+}
+```
+
 
 
 ### Heap
+
+```c++
+int h[N], ph[N], hp[N], cnt;  // 小根堆
+
+void heap_swap(int a, int b) {
+    swap(ph[hp[a]], ph[hp[b]]);
+    swap(hp[a], hp[b]);
+    swap(h[a], h[b]);
+}
+
+void down(int u) {
+    int t = u;
+    if (2 * u <= cnt && h[2 * u] < h[t]) t = 2 * u;
+    if (2 * u + 1 <= cnt && h[2 * u + 1] < h[t]) t = 2 * u + 1;
+    if (t != u) {
+        heap_swap(u, t);
+        down(t);
+    }
+}
+
+void up(int u) {
+    while (u / 2 && h[u] < h[u / 2]) {
+        heap_swap(u, u / 2);
+        u >>= 1;
+    }
+}
+```
 
 
 
@@ -583,9 +651,66 @@ int query(char *str) {
 
 ### Hash Table
 
+```c++
+const int N = 100003;  // 一般取大于数据范围的最小质数 可以证明 质数可以使冲突最小
+
+int h[N], e[N], ne[N], idx;
+
+void insert(int x) {
+    int k = (x % N + N) % N;
+    e[idx] = x;
+    ne[idx] = h[k];
+    h[k] = idx++;
+}
+
+bool find(int x) {
+    int k = (x % N + N) % N;
+    for (int i = h[k]; i != -1; i = ne[i]) {
+        if (e[i] == x) return true;
+    }
+    return false;
+}
+```
+
 
 
 ### String Hash
+
+```c++
+#include <iostream>
+#include <string>
+
+using namespace std;
+typedef unsigned long long ui64;
+
+const int N = 100010, P = 131;
+ui64 h[N], p[N];
+
+ui64 query(int l, int r) {
+    return h[r] - h[l-1] * p[r-l+1];
+}
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+    string s;
+    cin >> s;
+    p[0] = 1;
+    h[0] = 0;
+    for (int i = 0; i < n; i++) {
+        p[i+1] = p[i] * P;
+        h[i+1] = h[i] * P + s[i];
+    }
+    while (m--) {
+        int l1, r1, l2, r2;
+        cin >> l1 >> r1 >> l2 >> r2;
+        if(query(l1, r1) == query(l2, r2)) puts("Yes");
+        else puts("No");
+    }
+    
+    return 0;
+}
+```
 
 
 
@@ -782,7 +907,54 @@ void prim() {
 ### Krskl
 
 ```c++
+#include <bits/stdc++.h>
+using namespace std;
 
+const int N = 100010;
+int djset[N];  // 并查集
+
+struct E {
+    int a, b, w;
+    bool operator < (const E& x) {
+        return this->w < x.w;
+    }
+} edg[2 * N];
+
+int n, m, ret, cnt;
+
+int find(int x) {
+    if (djset[x] != x) djset[x] = find(djset[x]);
+    return djset[x];
+}
+
+void krskl() {
+    for (int i = 1; i <= m; i++) {
+        int pa = find(edg[i].a);
+        int pb = find(edg[i].b);
+        if (pa != pb) {
+            ret += edg[i].w;  // 最小生成树的权重和
+            djset[pa] = pb;  // 合并两个集合
+            cnt ++;  // 最小生成树的总边数
+        }
+    }
+}
+
+int main() {
+    cin >> n >> m;
+    for (int i = 1; i <= n; i++) djset[i] = i;  // 初始化并查集
+    for (int i = 1; i <= m; i++) {
+        int a, b, w;
+        cin >> a >> b >> w;
+        edg[i] = {a, b, w};
+    }
+    sort(edg+1, edg+m+1);
+    krskl();
+    if (cnt < n-1) {
+        cout << "impossible";
+    } else {
+        cout << ret;
+    }
+}
 ```
 
 ### 匈牙利算法 $O(nm)$
